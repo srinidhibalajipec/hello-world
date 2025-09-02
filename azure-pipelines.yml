@@ -1,20 +1,9 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
-- main   # or master, depending on your branch name
+- main   # runs whenever code is pushed to main branch
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo "Pipeline started from GitHub repo!"
-  displayName: "Say Hello"
-
-- script: python --version
-  displayName: "Check Python Version"
-
-- script: python hello.py
-  displayName: "Run your Python script"
+- script: echo "Running Hello World Pipeline"
+  displayName: "Print Hello World"
