@@ -1,6 +1,9 @@
 pool:
-  vmImage: 'windows-latest'   # or use Azure's default if you get free parallelism
+  name: MyPool   # or use vmImage if Microsoft-hosted is enabled
 
 steps:
+- checkout: self   # pulls code from GitHub repo
+- script: dir
+  displayName: "Show repo files"
 - script: python hello.py
-  displayName: "Run Python Script"
+  displayName: "Run hello.py"
