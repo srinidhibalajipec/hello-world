@@ -1,5 +1,5 @@
 pool:
-  name: MyPool   # or use Azure's default if you get free parallelism
+  vmImage: 'windows-latest'   # or use Azure's default if you get free parallelism
 
 steps:
 - script: python hello.py
