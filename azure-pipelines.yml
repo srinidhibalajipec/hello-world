@@ -1,9 +1,6 @@
-trigger:
-- main   # runs whenever code is pushed to main branch
-
 pool:
-  vmImage: 'ubuntu-latest'
+  name: MyPool   # or use Azure's default if you get free parallelism
 
 steps:
-- script: echo "Running Hello World Pipeline"
-  displayName: "Print Hello World"
+- script: python hello.py
+  displayName: "Run Python Script"
